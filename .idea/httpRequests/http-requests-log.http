@@ -1,0 +1,328 @@
+POST http://localhost:8000/api/json_datapoint/
+
+< D:/mycode/python36/IotRestfulHome/db/test.json
+
+<> 2019-12-14T021834.200.html
+
+###
+
+POST http://localhost:8000/api/json_datapoint/
+
+< D:/mycode/python36/IotRestfulHome/db/test.json
+
+<> 2019-12-14T021815.500.html
+
+###
+
+POST http://localhost:8000/api/json_datapoint/
+
+< D:/mycode/python36/IotRestfulHome/db/test.json
+
+<> 2019-12-14T021717.500.html
+
+###
+
+POST http://localhost:8000/api/json_datapoint/
+
+< D:/mycode/python36/IotRestfulHome/db/test.json
+
+<> 2019-12-14T021536.200.html
+
+###
+
+POST http://localhost:8000/api/json_datapoint/
+
+< D:/mycode/python36/IotRestfulHome/db/test.json
+
+<> 2019-12-14T021507.200.html
+
+###
+
+POST http://localhost:8000/api/json_datapoint/
+
+< D:/mycode/python36/IotRestfulHome/db/test.json
+
+<> 2019-12-14T021319.200.html
+
+###
+
+POST http://localhost:8000/api/json_datapoint/
+
+< D:/mycode/python36/IotRestfulHome/db/test.json
+
+<> 2019-12-14T021244.200.html
+
+###
+
+POST http://localhost:8000/api/json_datapoint/
+
+< D:/mycode/python36/IotRestfulHome/db/test.json
+
+<> 2019-12-14T021222.200.html
+
+###
+
+POST http://localhost:8000/api/json_datapoint/
+
+< D:/mycode/python36/IotRestfulHome/db/test.json
+
+<> 2019-12-14T021126.200.html
+
+###
+
+POST http://localhost:8000/api/json_datapoint/
+
+--null
+
+
+< D:\mycode\python36\IotRestfulHome\db\test.json
+--null--
+
+###
+
+POST http://localhost:8000/api/json_datapoint/
+
+--null
+
+
+< D:\mycode\python36\IotRestfulHome\db\test.json
+--null--
+
+<> 2019-12-14T021046.200.html
+
+###
+
+POST http://localhost:8000/api/json_datapoint/
+
+--null
+
+
+< D:\mycode\python36\IotRestfulHome\db\test.json
+--null--
+
+###
+
+POST http://localhost:8000/api/json_datapoint/
+
+--null
+
+
+< D:\mycode\python36\IotRestfulHome\db\test.json
+--null--
+
+<> 2019-12-14T021022.500.html
+
+###
+
+POST http://localhost:8000/api/json_datapoint/
+
+--null
+
+
+< D:\mycode\python36\IotRestfulHome\db\test.json
+--null--
+
+###
+
+POST http://localhost:8000/api/json_datapoint/
+
+--null
+
+
+< D:\mycode\python36\IotRestfulHome\db\test.json
+--null--
+
+<> 2019-12-14T020721.500.html
+
+###
+
+POST http://localhost:8000/api/json_datapoint/
+
+--null
+
+
+< D:\mycode\python36\IotRestfulHome\db\test.json
+--null--
+
+###
+
+POST http://localhost:8000/api/json_datapoint/
+
+--null
+
+
+< D:\mycode\python36\IotRestfulHome\db\test.json
+--null--
+
+<> 2019-12-14T020442.500.html
+
+###
+
+POST http://localhost:8000/api/json_datapoint/
+
+--null
+
+
+< D:\mycode\python36\IotRestfulHome\db\test.json
+--null--
+
+<> 2019-12-14T020250.500.html
+
+###
+
+POST http://localhost:8000/api/json_datapoint/
+
+< D:/mycode/python36/IotRestfulHome/db/test.json
+
+<> 2019-12-14T020212.200.html
+
+###
+
+POST http://localhost:8000/api/json_datapoint/
+
+{"sensor":"1", "value":"12","time":"201911251212"}
+
+<> 2019-12-14T015707.200.html
+
+###
+
+POST http://localhost:8000/api/datapoint/
+Accept: */*
+Cache-Control: no-cache
+
+{"sensor":"1", "value":"12","time":"201911251212"}
+
+<> 2019-12-13T104229.500.html
+
+###
+
+POST http://localhost:8000/api/datapoint/
+Accept: */*
+Cache-Control: no-cache
+
+{"sensor":"1", "value":"12","time":"201911251212"}
+
+<> 2019-12-13T104058.500.html
+
+###
+
+POST http://localhost:8000/api/datapoint/
+Accept: */*
+Cache-Control: no-cache
+
+[{"sensor":"1", "value":"12","time":"201911251212"} ]
+
+<> 2019-12-13T104037.200.html
+
+###
+
+POST http://localhost:8000/api/datapoint/
+Accept: */*
+Cache-Control: no-cache
+
+[{'sensor':'1', 'value':'12','time':'201911251212'} ,{'sensor':'2', 'value':'15','time':'201911251212'} ]
+
+<> 2019-12-13T103844.500.html
+
+###
+
+POST http://localhost:8000/api/datapoint
+Accept: */*
+Cache-Control: no-cache
+
+[{'sensor':'1', 'value':'12','time':'201911251212'} ,{'sensor':'2', 'value':'15','time':'201911251212'} ]
+
+<> 2019-12-13T103759.500.html
+
+###
+
+POST http://localhost:8000/api/datapoint?sensor=1&value=12&time=20191124
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-12-13T103559.500.html
+
+###
+
+POST http://localhost:8000/api/datapoint?sensor=1&value=12&time=20191124
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-12-13T103531.400.html
+
+###
+
+POST http://localhost:8000/api/datapoint?sensor=1&value=12&time=20191124
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-12-13T103319.400.html
+
+###
+
+GET http://localhost:8000/api/datapoint?sensor=1&value=12&time=20191124
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-11-24T082433.200.json
+
+###
+
+POST http://localhost:8000/api/datapoint?sensor=1&value=12&time=20191124
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-11-24T081922.500.html
+
+###
+
+POST http://localhost:8000/api/datapoint?sensor=1&value=12&time=201911242003
+Accept: */*
+Cache-Control: no-cache
+
+11
+
+<> 2019-11-24T081827.200.json
+
+###
+
+POST http://localhost:8000/api/datapoint?sensor=1&value=12&time=201911242003
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-11-24T081738.200.json
+
+###
+
+POST http://localhost:8000/api/datapoint?sensor=1&value=12&time=201911242003
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-11-24T081449.403.html
+
+###
+
+POST http://localhost:8000/api/datapoint?sensor=1&value=12&time=201911242003
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-11-24T081152.200.json
+
+###
+
+POST http://localhost:8000/api/datapoint?sensor=1&value=12&time=201911242003
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-11-24T080533.200.json
+
+###
+
+POST http://localhost:8000/api/datapoint?sensor=1&value=12&time=201911242003
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-11-24T080309.200.json
+
+###
+

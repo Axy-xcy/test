@@ -1,0 +1,194 @@
+  <!-- Content Wrapper. Contains page content -->
+ <link rel="stylesheet" href="https://adminlte.io/themes/AdminLTE/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="https://adminlte.io/themes/AdminLTE/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+  <style>
+ /*
+ * Content Wrapper - contains the main content
+ */
+.content-wrapper,
+.main-footer {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+  -moz-transition: -moz-transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+  -o-transition: -o-transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+  margin-left: 5px;
+  z-index: 820;
+}
+.layout-top-nav .content-wrapper,
+.layout-top-nav .main-footer {
+  margin-left: 0;
+}
+@media (max-width: 767px) {
+  .content-wrapper,
+  .main-footer {
+    margin-left: 0;
+  }
+}
+@media (min-width: 768px) {
+  .sidebar-collapse .content-wrapper,
+  .sidebar-collapse .main-footer {
+    margin-left: 0;
+  }
+}
+@media (max-width: 767px) {
+  .sidebar-open .content-wrapper,
+  .sidebar-open .main-footer {
+    -webkit-transform: translate(230px, 0);
+    -ms-transform: translate(230px, 0);
+    -o-transform: translate(230px, 0);
+    transform: translate(230px, 0);
+  }
+}
+.content-wrapper {
+  min-height: calc(100vh - 101px);
+  background-color: #ecf0f5;
+  z-index: 800;
+}
+@media (max-width: 767px) {
+  .content-wrapper {
+    min-height: calc(100vh - 151px);
+  }
+}
+.main-footer {
+  background: #fff;
+  padding: 15px;
+  color: #444;
+  border-top: 1px solid #d2d6de;
+}
+
+  </style>
+
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        数据上传API帮助说明
+        <small>v1.0</small>
+      </h1>
+{#      <ol class="breadcrumb">#}
+{#        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>#}
+{#        <li><a href="#">Forms</a></li>#}
+{#        <li class="active">General Elements</li>#}
+{#      </ol>#}
+    </section>
+ <section class="content">
+      <div class="row">
+        <!-- left column -->
+{#        <div class="col-md-4">#}
+{#          <!-- general form elements -->#}
+{#          <div class="box box-primary">#}
+{#            <div class="box-header with-border">#}
+{#              <h3 class="box-title">模拟器</h3>#}
+{#            </div>#}
+{#            <!-- /.box-header -->#}
+{#            <!-- form start -->#}
+{#            <form role="form">#}
+{#              <div class="box-body">#}
+{#                <div class="form-group">#}
+{#                  <label for="{{ dataform.sensor.id_for_label }}">传感器</label>#}
+{#                  {{ dataform.sensor }}#}
+{#                </div>#}
+{#                <div class="form-group">#}
+{#                  <label for="{{ dataform.value.id_for_label }}">数据内容</label>#}
+{#                  {{ dataform.value }}#}
+{#                </div>#}
+{#                <div class="form-group">#}
+{#                  <label for="{{ dataform.time.id_for_label }}">采集时间</label>#}
+{#                  {{ dataform.time }}#}
+{#                </div>#}
+{##}
+{#              </div>#}
+{#              <!-- /.box-body -->#}
+{##}
+{#              <div class="box-footer">#}
+{#                <button type="submit" class="btn btn-primary">生成模拟代码</button>#}
+{#              </div>#}
+{#            </form>#}
+{#          </div>#}
+{#        </div>#}
+        <div class="col-md-12">
+          <!-- general form elements -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">POST和JSON方法代码</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form">
+              <div class="box-body" style="height: 600px">
+{#                                 <div class="form-group">#}
+{#                                     JSON方法(传感器ID、测量数值、测量时间)：#}
+{#                  <pre>#}
+{#                      <code>#}
+{#import requests#}
+{#import json#}
+{#url="http://iot.lubangongju.com"+"/api/json_datapoint/"#}
+{#params={"datapoints":[{"sensor":"1", "value":"11","collect_time":"201911251212"},{"sensor":"2", "value":"12","collect_time":"201911251212"}]}#}
+{#requests.post(url, data=json.dumps(params), headers={'Content-Type': 'application/json'})#}
+{#print(ret)#}
+{#</code>#}
+{#                  </pre>#}
+{#</div>#}
+                                <div class="form-group">
+
+                  <pre>
+                      <code>
+import requests
+from datetime import datetime
+
+def json_report(url="http://127.0.0.1:8000",params=0):
+    """
+    上传多个传感器的测量值
+    :return:
+    """
+    url=url+"/api/json_datapoint/"
+    now = str(datetime.now())
+    headers={"Content-Type":"application/json"}
+    if params==0:
+        params={"datapoints":[{"sensor":"1", "value":"13","collect_time":now},{"sensor":"2", "value":"14","collect_time":now}]}
+    ret=requests.post(url, json=params, headers=headers)
+    # ret=requests.post(url, data=json.dumps(params), headers=headers)
+    print(ret)
+
+def post_report(url="http://127.0.0.1:8000",params=0):
+    """
+    上传单个传感器的测量值
+    :return:
+    """
+    url=url+"/api/post_datapoint/"
+    if params==0:
+        params={"sensor":"1", "value":"33","collect_time":str(datetime.now())}
+    ret=requests.post(url, params)
+    print(ret)
+#json_report()
+
+#post_report()
+
+
+
+                        </code>
+                  </pre>
+</div>
+              </div>
+              <!-- /.box-body -->
+
+
+            </form>
+          </div>
+        </div>
+      </div>
+  </section>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- END Content -->

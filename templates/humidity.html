@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>数据图表</title>
+    <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js" ></script>
+</head>
+<body>
+    <div id="humidity" style="width: 1200px;height:400px;"></div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+                        var myChart = echarts.init(document.getElementById("humidity"));
+                        myChart.setOption({
+                            title:{text: '湿度数据'},
+                            tootip:{trigger:'item'},
+                            legend:{
+                                data:['湿度01','湿度02'],
+                            },
+                            xAxis:{
+                                data:[]
+                            },
+                            yAxis:{},
+                            series:[
+                                {
+                                    name:"",
+                                    type:"line",
+                                    color:[],
+                                    data:[]
+                                },{
+                                    name:"",
+                                    type:"line",
+                                    color:[],
+                                    data:[]
+                                }
+
+                            ]
+                        });
+
+                        $.get('http://127.0.0.1:8000/humidityjson').done(function(data){
+                            myChart.setOption({
+                                xAxis:{
+                                    data:data.humidity01_time
+                                },
+                                series:[{
+                                    name:'湿度01',
+                                    data:data.humidity01_value
+                                },
+                                {
+                                    name:'湿度02',
+                                    data:data.humidity02_value
+                                }]
+                            });
+
+                        });
+		});
+    </script>
+
+</body>
+</html>
